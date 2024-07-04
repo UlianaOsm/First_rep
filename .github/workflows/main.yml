@@ -14,11 +14,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
-        python-version: '3.x'  # Вкажіть версію Python, яку ви використовуєте
+        python-version: '3.x'  # Замініть '3.x' на конкретну версію Python, яку ви використовуєте
 
     - name: Install dependencies
       run: |
